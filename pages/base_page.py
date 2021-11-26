@@ -23,7 +23,7 @@ class BasePage:
         self.find_element(*locator).send_keys(data)
 
     def find_element(self, *locator):
-        self.wait_element(*locator)
+        # self.wait_element(*locator)
         return self.driver.find_element(*locator)
 
     def find_elements(self, *locator):  # method to grab multiple elements
@@ -53,7 +53,7 @@ class BasePage:
             print(locator)
         except TimeoutException:
             print("\n * ELEMENT NOT FOUND WITHIN GIVEN TIME! --> %s" % (locator[1]))
-            self.driver.quit()
+            # self.driver.quit()
 
     # Method to explicitly wait for user defined time.
     def wait_element_custom_time(self, *locator, time):

@@ -1,6 +1,5 @@
-from base import Base
+from test.base import Base
 from pages.all_pages import CommonPage
-from selenium.webdriver.common.by import By
 
 
 class TestSkrillAvailability(Base):
@@ -8,3 +7,4 @@ class TestSkrillAvailability(Base):
     def test_apnar_taka(self):
         page = CommonPage(self.driver)
         page.login()
+        page.go_to_wallet_sell_page_check_send_notification()

@@ -6,3 +6,4 @@ class HomePageLocators:
     PASSWORD_FIELD = (By.XPATH, "//input[@id='pwd']")
     LOGIN_BTN = (By.XPATH, "//button[@name='submit']")
     SKRILL_OPTION = (By.XPATH, "//option[@value='25']")
+    DROP_DOWN = (By.XPATH, "//select[@id='sents']")

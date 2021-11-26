@@ -13,7 +13,6 @@ class BasePage:
 
     def click(self, locator):
         self.driver.implicitly_wait(1)
-        # sleep(1)
         self.driver.find_element(*locator).click()
 
     def clear_data(self, locator):

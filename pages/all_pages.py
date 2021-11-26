@@ -1,7 +1,10 @@
 from decouple import config
 import time
+from selenium.common.exceptions import NoSuchElementException
 from pages.base_page import BasePage
 from utils.locators import HomePageLocators
+from data.data import wallet_sell_url
+from utils.email import send_mail
 
 
 class CommonPage(BasePage):
@@ -16,5 +19,10 @@ class CommonPage(BasePage):
         time.sleep(1)
         self.click(self.locators.LOGIN_BTN)
 
-    def go_to_wallet_sell_page(self):
-        self.click()
+    def go_to_wallet_sell_page_check_send_notification(self):
+        self.get(wallet_sell_url)
+        try:
+            self.find_element(*self.locators.SKRILL_OPTION)
+            send_mail('Skrill Enabled. You can sell now. Hurry!')
+        except NoSuchElementException:
+            send_mail('Skrill option is disabled now. SAD!!')

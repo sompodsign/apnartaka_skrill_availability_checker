@@ -39,9 +39,9 @@ class CommonPage(BasePage):
             pass
         if skrill_element:
             notification.notify(title='Apnartaka Skrill', message='Skrill Enabled. You can sell now. Hurry!',
-                                app_name='skill checker', timeout=10, toast=False)
+                                app_name='skill checker', app_icon='data/Goescat-Macaron-Telegram.ico', ticker='Skrill Open', timeout=10, toast=True)
             send_mail('Skrill Enabled. You can sell now. Hurry!')
         else:
             notification.notify(title='Apnartaka Skrill', message='Skrill option is disabled now. SAD!!',
-                                app_name='skill checker', timeout=10, toast=False)
+                                app_name='skill checker', app_icon='data/Goescat-Macaron-Telegram.ico', ticker='Skrill Closed', timeout=10, toast=False)
             send_mail('Skrill option is disabled now. SAD!!')

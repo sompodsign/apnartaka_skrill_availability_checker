@@ -1,5 +1,5 @@
-from test.base import Base
 from pages.all_pages import CommonPage
+from test.base import Base
 
 
 class TestSkrillAvailability(Base):

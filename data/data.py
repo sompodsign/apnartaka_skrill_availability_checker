@@ -1,0 +1,1 @@
+wallet_sell_url = "https://apnartaka.com/account/sell"

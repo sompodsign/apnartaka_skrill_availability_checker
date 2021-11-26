@@ -1,0 +1,1 @@
+#Python app to check if Skrill selling option is enabled in apnartaka.com

@@ -45,3 +45,4 @@ class CommonPage(BasePage):
             notification.notify(title='Apnartaka Skrill', message='Skrill option is disabled now. SAD!!',
                                 app_name='skill checker', app_icon='data/Goescat-Macaron-Telegram.ico', ticker='Skrill Closed', timeout=10, toast=False)
             send_mail('Skrill option is disabled now. SAD!!')
+
